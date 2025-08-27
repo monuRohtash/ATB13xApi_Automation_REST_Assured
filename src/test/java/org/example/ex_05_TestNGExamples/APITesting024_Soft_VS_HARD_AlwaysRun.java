@@ -11,7 +11,7 @@ public class APITesting024_Soft_VS_HARD_AlwaysRun {
     @Test(dependsOnMethods = "login")         // Hard dependency
     public void placeOrder() { /* runs only if login passed */ }
 
-    @Test(dependsOnMethods = "login",         // Soft dependency
-            alwaysRun = true)
+    @Test(dependsOnMethods = "login", alwaysRun = true)        // Soft dependency
+
     public void closeBrowser() { /* runs even if login failed */ }
 }
